@@ -33,15 +33,16 @@ class Test_ch_1(unittest.TestCase):
 
         third_attempt =  timeit.timeit(
                 lambda: "self.ex.loop_fast(2500000)") 
-        
+
         self.assertGreater(first_attempt, second_attempt)
         self.assertGreater(second_attempt, third_attempt)
 
 
 
-        print("this is 1st: {}\n2nd: {}\n3rd: {}".format(
-            first_attempt, second_attempt, third_attempt))
-        
+        print(
+            f"this is 1st: {first_attempt}\n2nd: {second_attempt}\n3rd: {third_attempt}"
+        )
+            
 
 
 

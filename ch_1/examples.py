@@ -13,8 +13,7 @@ class Example:
         z = np.random.standard_normal(I)
         ST = S0 * np.exp((R - sigma ** 2/2) * T + sigma * math.sqrt(T) *z)
         hT = np.maximum(ST - K, 0)
-        C0 = math.exp(-R * T) * np.mean(hT)
-        return C0
+        return math.exp(-R * T) * np.mean(hT)
 
     def analyze_historical_index_levels(self, location):
         data  = pd.read_csv(location, index_col=0, parse_dates=True)
